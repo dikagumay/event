@@ -1,0 +1,461 @@
+{
+	"info": {
+		"_postman_id": "18f35111-62e3-4560-a390-445d77f9a4a4",
+		"name": "Event",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "create user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlevent}}{{createuser}}?name=clemira&jabatan=CEO&perusahaan=Evolution Ltd&norfid=99899877&group=DCM&type=4",
+					"host": [
+						"{{urlevent}}{{createuser}}"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "clemira"
+						},
+						{
+							"key": "jabatan",
+							"value": "CEO"
+						},
+						{
+							"key": "perusahaan",
+							"value": "Evolution Ltd"
+						},
+						{
+							"key": "norfid",
+							"value": "99899877"
+						},
+						{
+							"key": "group",
+							"value": "DCM"
+						},
+						{
+							"key": "type",
+							"value": "4"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "searchbyname",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlevent}}/{{searchuserbyname}}?name=clemira",
+					"host": [
+						"{{urlevent}}"
+					],
+					"path": [
+						"{{searchuserbyname}}"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "clemira"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete user by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlevent}}{{deleteuserbyid}}?id=207",
+					"host": [
+						"{{urlevent}}{{deleteuserbyid}}"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "207"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search user by type and norfid null",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlevent}}{{searchuserbytype}}?type=3",
+					"host": [
+						"{{urlevent}}{{searchuserbytype}}"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get user by name or rfid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlevent}}{{checkinuserbyrfidorname}}?key=clemir",
+					"host": [
+						"{{urlevent}}{{checkinuserbyrfidorname}}"
+					],
+					"query": [
+						{
+							"key": "key",
+							"value": "clemir"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "chekin by rfid",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlevent}}{{checkinuserbyrfid}}?norfid=99899877",
+					"host": [
+						"{{urlevent}}{{checkinuserbyrfid}}"
+					],
+					"query": [
+						{
+							"key": "norfid",
+							"value": "99899877"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update time checkin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlevent}}{{updatetimecheckin}}?id=1337",
+					"host": [
+						"{{urlevent}}{{updatetimecheckin}}"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1337"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update status user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlevent}}{{updateuserstatus}}?id=1337&status=CHECK IN",
+					"host": [
+						"{{urlevent}}{{updateuserstatus}}"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1337"
+						},
+						{
+							"key": "status",
+							"value": "CHECK IN"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get duplicate user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlevent}}{{getduplicateuser}}",
+					"host": [
+						"{{urlevent}}{{getduplicateuser}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update no kartu",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlevent}}{{updatenokartuuser}}?id=1337&norfid=2097312797",
+					"host": [
+						"{{urlevent}}{{updatenokartuuser}}"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1337"
+						},
+						{
+							"key": "norfid",
+							"value": "2097312797"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "count checkin bytype",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlevent}}{{countchekinbyusertype}}?type=1",
+					"host": [
+						"{{urlevent}}{{countchekinbyusertype}}"
+					],
+					"query": [
+						{
+							"key": "type",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "count user checkin",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlevent}}{{countuserterdaftar}}",
+					"host": [
+						"{{urlevent}}{{countuserterdaftar}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "check duplikasi kartu",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlevent}}{{checkduplikasikartu}}?norfid=663453",
+					"host": [
+						"{{urlevent}}{{checkduplikasikartu}}"
+					],
+					"query": [
+						{
+							"key": "norfid",
+							"value": "663453"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlevent}}{{updateuser}}?id=1337&name=Clemira Ashalina Shanum&group=Evolution Group&jabatan=CEO&perusahaan=Evo Ltd&norfid=333444&type=1",
+					"host": [
+						"{{urlevent}}{{updateuser}}"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "1337"
+						},
+						{
+							"key": "name",
+							"value": "Clemira Ashalina Shanum"
+						},
+						{
+							"key": "group",
+							"value": "Evolution Group"
+						},
+						{
+							"key": "jabatan",
+							"value": "CEO"
+						},
+						{
+							"key": "perusahaan",
+							"value": "Evo Ltd"
+						},
+						{
+							"key": "norfid",
+							"value": "333444"
+						},
+						{
+							"key": "type",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get All User",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlevent}}{{getalluser}}",
+					"host": [
+						"{{urlevent}}{{getalluser}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "search user by name and persh",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlevent}}{{searchuserbypersh}}?name=clem&persh=evo",
+					"host": [
+						"{{urlevent}}{{searchuserbypersh}}"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "clem"
+						},
+						{
+							"key": "persh",
+							"value": "evo"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get all timeline",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlevent}}{{getalltimeline}}",
+					"host": [
+						"{{urlevent}}{{getalltimeline}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get timeline by star",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{urlevent}}{{getalltimelinebystar}}?star=3",
+					"host": [
+						"{{urlevent}}{{getalltimelinebystar}}"
+					],
+					"query": [
+						{
+							"key": "star",
+							"value": "3"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create timelinez",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "file",
+					"file": {
+						"src": "Screen Shot 2019-05-28 at 23.07.00.png"
+					}
+				},
+				"url": {
+					"raw": "{{urlevent}}{{createtimeline}}?norfid=2100640253&star=5&comment=cihuuuuyyy yuuuk",
+					"host": [
+						"{{urlevent}}{{createtimeline}}"
+					],
+					"query": [
+						{
+							"key": "norfid",
+							"value": "2100640253"
+						},
+						{
+							"key": "star",
+							"value": "5"
+						},
+						{
+							"key": "comment",
+							"value": "cihuuuuyyy yuuuk"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "b1b699cf-d66d-4a47-9542-9a21256fe1fa",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "8b90fba5-ddaa-4df3-8044-f00b721f0aef",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
